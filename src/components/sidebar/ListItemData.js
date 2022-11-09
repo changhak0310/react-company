@@ -6,7 +6,7 @@ import ListAltIcon from '@mui/icons-material/ListAlt';
 import ListAltTwoToneIcon from '@mui/icons-material/ListAltTwoTone';
 
 
-export const headerData = [
+export const ListItemData = [
     {
         title: "USER",
         path: "/user",

@@ -5,16 +5,13 @@ import Box from '@mui/material/Box';
 //Icon
 import AdbIcon from '@mui/icons-material/Adb';
 
-const styles = {
-    LogoRoot : {
-        display: 'inline-flex',
-        alignItems: 'center',
-    }
-}
-
 export default function Logo() {
     return(
-        <Box style={styles.LogoRoot}>
+        <Box 
+        sx={{
+            display: 'inline-flex',
+            alignItems: 'center',
+        }}>
             <AdbIcon/>
             <Typography
               variant="h5"

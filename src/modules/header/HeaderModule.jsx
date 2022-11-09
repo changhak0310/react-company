@@ -11,7 +11,11 @@ import Profile from '../../components/header/Profile';
 
 export default function HeaderModule() {
     return(
-      <AppBar position="static">
+      <AppBar position="static" sx={{
+        boxShadow: 'none', 
+        height: '64px',
+        backgroundColor: 'primary.main'
+      }}>
         <Container>
           <Toolbar disableGutters>
             <Box
@@ -19,11 +23,14 @@ export default function HeaderModule() {
                 width: '100%',
                 display: 'flex',
                 justifyContent: 'space-between',
-                background: 'primary.main',
-            }}> 
+            }}
+            //</Toolbar>sx={{style}}
+            > 
+
               <Logo/>
 
               <Profile/>
+
             </Box>
           </Toolbar>
         </Container>
