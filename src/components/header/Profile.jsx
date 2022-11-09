@@ -12,7 +12,7 @@ const settings = ['Logout'];
 
 const styles = {
     ProfileRoot : {
-        background: 'red',
+        
     }
 }
 

@@ -7,7 +7,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 
 const styles = {
     LogoRoot : {
-        background: 'black',
         display: 'inline-flex',
         alignItems: 'center',
     }
