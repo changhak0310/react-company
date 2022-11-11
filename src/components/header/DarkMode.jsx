@@ -33,7 +33,6 @@ export default function DarkMode() {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
           color: 'text.primary',
         }}
         >
@@ -47,6 +46,7 @@ export default function DarkMode() {
             >
               {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
+            {theme.palette.mode}
         </Box>
     )
 }

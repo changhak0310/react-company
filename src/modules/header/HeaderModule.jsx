@@ -22,22 +22,20 @@ export default function HeaderModule() {
             <Box
               sx={{ 
                 width: '100%',
+                height: '64px',
                 display: 'flex',
                 justifyContent: 'space-between',
             }}
             //</Toolbar>sx={{style}}
             > 
-              <Box
-                sx={{
-                  justifyContent: 'start',
-                }}
-              >
-                <Logo/>
-              </Box>
+       
+              <Logo/>
+              
               
               <Box
                 sx={{
-                  display: 'flex'
+                  display: 'flex',
+                  alignItems: 'center',
                 }}
               >
                 <Profile/>
