@@ -1,3 +1,4 @@
+import * as React from "react"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import User from "./pages/User";
 import Schedule from "./pages/Schedule";
@@ -7,6 +8,10 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 //Module
 import HeaderModule from "./modules/header/HeaderModule";
 import Sidebar from './modules/sidebar/SidebarModule';
+
+//recoil
+import { useRecoilState } from 'recoil'
+import { darkModeAtom } from './recoil/Atom'
 
 const getDesignToken = (mode) => ({
   palette: {
@@ -31,10 +36,18 @@ const getDesignToken = (mode) => ({
 })
 
 function App() {
-  const MainTheme = createTheme(getDesignToken('light'))
+  const [mode, setMode] = useRecoilState(darkModeAtom);
+  // const [mode, setMode] = React.useState('light');
+  
+  const theme = React.useMemo(
+    () =>
+    createTheme(getDesignToken(mode)),
+    [mode],
+  );
+
   return (
     <BrowserRouter>
-      <ThemeProvider theme={MainTheme}>
+      <ThemeProvider theme={theme}>
         <HeaderModule/>
         <Sidebar/>
         <Routes>

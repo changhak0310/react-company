@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 //components
 import Logo from '../../components/header/Logo';
 import Profile from '../../components/header/Profile';
+import DarkMode from '../../components/header/DarkMode';
 
 export default function HeaderModule() {
     return(
@@ -26,10 +27,24 @@ export default function HeaderModule() {
             }}
             //</Toolbar>sx={{style}}
             > 
+              <Box
+                sx={{
+                  justifyContent: 'start',
+                }}
+              >
+                <Logo/>
+              </Box>
+              
+              <Box
+                sx={{
+                  display: 'flex'
+                }}
+              >
+                <Profile/>
 
-              <Logo/>
+                <DarkMode/>
+              </Box>
 
-              <Profile/>
 
             </Box>
           </Toolbar>
