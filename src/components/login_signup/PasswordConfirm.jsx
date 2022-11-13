@@ -11,7 +11,7 @@ export default function PasswordConfirm({formik}) {
             type="password"
             label="PasswordConfirm"
             {...formik.getFieldProps("passwordConfirm")}
-            errer={formik.touched.passwordConfirm && formik.errors.passwordConfirm ? 1 : 0}
+            error={formik.touched.passwordConfirm && formik.errors.passwordConfirm ? true : false}
             helperText={formik.touched.passwordConfirm && formik.errors.passwordConfirm}
         />
     )

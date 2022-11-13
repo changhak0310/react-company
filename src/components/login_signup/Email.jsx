@@ -11,7 +11,7 @@ export default function Email({formik}) {
             type="email"
             label="Email Adress"
             {...formik.getFieldProps("email")}
-            errer={formik.touched.email && formik.errors.email ? 1 : 0}
+            error={formik.touched.email && formik.errors.email ? true : false}
             helperText={formik.touched.email && formik.errors.email}
         />
     )

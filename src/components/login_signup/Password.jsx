@@ -19,7 +19,7 @@ export default function Password({formik}) {
             type={showPassword ? "text" : "password"}
             label="Password"
             {...formik.getFieldProps("password")}
-            errer={formik.touched.password && formik.errors.password ? 1 : 0}
+            error={formik.touched.password && formik.errors.password ? true : false}
             helperText={formik.touched.password && formik.errors.password}
             InputProps={{
                 endAdornment: (

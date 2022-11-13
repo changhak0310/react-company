@@ -11,7 +11,7 @@ export default function Name({formik}) {
             type="name"
             label="Name"
             {...formik.getFieldProps("name")}
-            errer={formik.touched.name && formik.errors.name ? 1 : 0}
+            error={formik.touched.name && formik.errors.name ? true : false}
             helperText={formik.touched.name && formik.errors.name}
         />
     )

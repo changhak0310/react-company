@@ -26,7 +26,7 @@ export default function SignUpFormModule() {
         password: Yup.string()
             .required("Password is required"),
         passwordConfirm: Yup.string()
-            .oneOf([Yup.ref('password'), null], 'password is not matched')
+            .oneOf([Yup.ref('password'), null], 'Password is not matched')
             .required("PasswordConfirm is required"),
     })
 
