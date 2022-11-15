@@ -1,5 +1,5 @@
 import * as React from "react"
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 //Pages
@@ -56,6 +56,7 @@ function App() {
           <Route element={<Todo/>} path="/todo"/>
           <Route element={<Login/>} path="/login"/>
           <Route element={<SignUp/>} path="/signup"/>
+          <Route element={<Navigate replace to="/user"/>} path="/" />
           <Route element={<PageNotFound/>} path="*" />
         </Routes> 
       </ThemeProvider>
