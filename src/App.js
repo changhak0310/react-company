@@ -8,10 +8,7 @@ import Schedule from "./pages/Schedule";
 import Todo from "./pages/Todo";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-
-//Module
-import HeaderModule from "./modules/header/HeaderModule";
-import Sidebar from './modules/sidebar/SidebarModule';
+import PageNotFound from "./pages/PageNotFound";
 
 //recoil
 import { useRecoilState } from 'recoil'
@@ -53,30 +50,14 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        {
-          isLogin ? 
-          (
-            <>
-              <HeaderModule/>
-              <Sidebar/>
-              <Routes>
-                <Route element={<User/>} path="/user"/>
-                <Route element={<Schedule/>} path="/schedule"/>
-                <Route element={<Todo/>} path="/todo"/>
-              </Routes>
-            </>
-          )
-          :
-          (
-            <>
-              <Routes>
-                <Route element={<Login/>} path="/login"/>
-                <Route element={<SignUp/>} path="/signup"/>
-              </Routes>
-            </>
-          )
-        }
-        
+        <Routes>
+          <Route element={<User/>} path="/user"/>
+          <Route element={<Schedule/>} path="/schedule"/>
+          <Route element={<Todo/>} path="/todo"/>
+          <Route element={<Login/>} path="/login"/>
+          <Route element={<SignUp/>} path="/signup"/>
+          <Route element={<PageNotFound/>} path="*" />
+        </Routes> 
       </ThemeProvider>
     </BrowserRouter>
   );

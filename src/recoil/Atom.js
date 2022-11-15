@@ -7,5 +7,5 @@ export const darkModeAtom = atom({
 
 export const isLoginAtom = atom({
     key: 'isLogin',
-    default: false
+    default: true
 })

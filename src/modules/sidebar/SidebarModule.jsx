@@ -20,8 +20,9 @@ export default function Sidebar() {
             '& .MuiPaper-root': {
                 backgroundColor: 'primary.light',
                 width: '240px',
-                position: 'static',
-                height: '100vh'
+                position: 'relative',
+                height: '100vh',
+
             }
         }}>
             <Typography>
