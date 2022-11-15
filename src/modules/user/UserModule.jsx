@@ -3,7 +3,6 @@ import React from "react";
 //MUI
 import Card from '@mui/material/Card'; 
 import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 
 //components
@@ -15,7 +14,7 @@ export default function UserModule(){
     return(
         <Card
             sx={{
-                maxWidth: '500px',
+                minWidth: '500px',
                 height: '840px'
             }}
         >

@@ -4,9 +4,11 @@ import React from "react";
 import HeaderModule from '../modules/header/HeaderModule'
 import SidebarModule from '../modules/sidebar/SidebarModule'
 import UserModule from "../modules/user/UserModule";
+import CommuteModule from "../modules/user/CommuteModule";
 
 //Mui
 import Box from "@mui/material/Box";
+import { Stack } from "@mui/system";
 
 export default function User() {
     return (
@@ -30,8 +32,11 @@ export default function User() {
                         sx={{
                             margin: '2rem',
                         }}
-                    >
-                        <UserModule/>
+                    >   
+                        <Stack spacing={4} direction="row">
+                            <UserModule/>
+                            <CommuteModule/>
+                        </Stack>
                     </Box>
                 </Box>
             </Box>
