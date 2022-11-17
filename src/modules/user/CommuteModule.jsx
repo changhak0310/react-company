@@ -22,6 +22,10 @@ export default function CommuteModule() {
         };
     }, []);
 
+    const commuteButtonclick = () => {
+        console.log("ds")
+    }
+
     return(
         <Card
             sx={{
@@ -35,7 +39,7 @@ export default function CommuteModule() {
                     alignItems="center"
                 >
                     <Circle value={progress}/>
-                    <CommuteButton/>
+                    <CommuteButton onClick={commuteButtonclick}/>
                 </Stack>
             </CardContent>
         </Card>
